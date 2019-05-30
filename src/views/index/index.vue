@@ -24,7 +24,7 @@
                     <div class="small-box bg-green">
                         <div class="inner">
                             <h3>53<sup style="font-size: 20px">%</sup></h3>
-                            <p>Bounce Rate</p>
+                            <p>趋势图</p>
                         </div>
                         <div class="icon">
                             <i class="fa fa-bar-chart"></i>
@@ -36,7 +36,7 @@
                     <div class="small-box bg-yellow">
                         <div class="inner">
                             <h3>44</h3>
-                            <p>User Registrations</p>
+                            <p>新用户</p>
                         </div>
                         <div class="icon">
                             <i class="fa fa-user-plus"></i>
@@ -48,7 +48,7 @@
                     <div class="small-box bg-red">
                         <div class="inner">
                             <h3>65</h3>
-                            <p>Unique Visitors</p>
+                            <p>访客率</p>
                         </div>
                         <div class="icon">
                             <i class="fa fa-pie-chart"></i>
