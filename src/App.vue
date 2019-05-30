@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="wrapper page">
+    <div id="app" class="wrapper animate-in">
         <Header></Header>
         <Sidebar></Sidebar>
         <div class="content-wrapper">
