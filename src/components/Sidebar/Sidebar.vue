@@ -27,13 +27,13 @@
             <!-- /.search form -->
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li v-for="(item,index) in sidebarList" :key="item.key" @click.stop="handleNav(index)" :class="[item.children.length?'treeview':'',index===currentIndex?'active':'']">
+                <li v-for="(item,index) in sidebarList" :key="item.key" @click="handleNav(item,index)" :class="[item.children.length?'treeview':'',index===currentIndex?'active':'']">
                     <router-link :to="item.link">
                         <i :class="['fa',item.icon]"></i> <span>{{item.title}}</span>
                         <i v-if="item.children.length" class="fa fa-angle-left pull-right"></i>
                     </router-link>
                     <ul v-if="item.children.length" class="treeview-menu">
-                        <li v-for="(citem,cindex) in item.children" :key="citem.key" @click.stop="handleLevel(cindex)" :class="cindex===currentLevel?'level-active':''">
+                        <li v-for="(citem,cindex) in item.children" :key="citem.key" @click="handleLevel(cindex)" :class="cindex+1===currentLevel?'level-active':''">
                             <router-link :to="citem.link"><i :class="['fa',citem.icon]"></i> <span>{{citem.title}}</span></router-link>
                         </li>
                     </ul>
@@ -64,7 +64,7 @@
                     link: '/other',
                     children: []
                 }, {
-                    icon: 'fa-link',
+                    icon: 'fa-bars',
                     title: '下拉菜单',
                     link: '#',
                     children: [{
@@ -80,13 +80,27 @@
             }
         },
         methods: {
-            handleNav(index) {
+            // 一级目录样式切换
+            handleNav(item, index) {
                 this.currentIndex = index;
-                this.currentLevel = 10;
+                localStorage.setItem('navIndex', this.currentIndex);
+                if (!item.children.length) {
+                    this.currentLevel = 0;
+                    localStorage.removeItem('levelIndex');
+                }
             },
+            // 二级目录样式切换
             handleLevel(index) {
-                this.currentLevel = index;
-                console.log(this.currentLevel);
+                this.currentLevel = index + 1;
+                localStorage.setItem('levelIndex', this.currentLevel);
+            }
+        },
+        mounted() {
+            if (localStorage.getItem('navIndex')) {
+                this.currentIndex = parseInt(localStorage.getItem('navIndex'));
+            }
+            if (localStorage.getItem('levelIndex')) {
+                this.currentLevel = parseInt(localStorage.getItem('levelIndex'));
             }
         }
     }

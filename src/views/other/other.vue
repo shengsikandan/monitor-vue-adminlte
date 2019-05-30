@@ -1,5 +1,5 @@
 <template>
-    <div class="other">
+    <div class="animate-in other">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">

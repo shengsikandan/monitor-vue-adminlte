@@ -1,5 +1,5 @@
 <template>
-    <div id="index">
+    <div id="animate-in index">
         <section class="content-header">
             <h1>
                 页面标题

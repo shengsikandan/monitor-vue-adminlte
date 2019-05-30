@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="wrapper">
+    <div id="app" class="wrapper page">
         <Header></Header>
         <Sidebar></Sidebar>
         <div class="content-wrapper">
@@ -30,5 +30,21 @@
 <style lang="scss">
     * {
         scroll-behavior: smooth;
+    }
+
+    // 页面进入动画样式
+    .animate-in {
+        animation: animate-in .5s forwards;
+    }
+
+    // 页面进入动画效果
+    @keyframes animate-in {
+        from {
+            transform: scale(1.1);
+        }
+
+        to {
+            transform: scale(1);
+        }
     }
 </style>
