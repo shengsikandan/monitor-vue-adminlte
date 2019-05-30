@@ -1,28 +1,26 @@
-# vue-adminlte
+# 项目背景
+最近在了解AdminLTE,感觉其在响应式界面和UI上都非常不错，继承了Bootstrap的一贯风格。但是在业务开发中需要用到Vue.js，于是基于Vue.js 2.x 配置了 AdminLTE 2 方便以后开发时使用。
 
- <img alt="vue-adminlte" src="./src/static/img/preview.png"/>
- 
-## Project setup
-```
-npm install
-```
+## ![预览图](./src/static/img/preview.png "vue-adminlte")
 
-### Compiles and hot-reloads for development
+## 项目运行步骤：
 
-    npm run serve
+**1. 插件安装**
 
-### Compiles and minifies for production
+    ```
+        npm install
+    ```
 
-    npm run build
+**2. 运行项目**
 
-### Run your tests
+    ```
+        *npm run serve*
+    ```
 
-    npm run test
+    **3. 打包项目**
 
-### Lints and fixes files
+    ```
+        *npm run build*
+    ```
 
-    npm run lint
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> 页面显示动画是在App.vue中定义了一个全局的css3样式，然后在页面中的根节点加入对应的class类名就可以了，相应的动画效果可以自定义修改，也可以使用Vue自带的动画。
