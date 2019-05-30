@@ -24,6 +24,12 @@
             Footer,
             Sidebar,
             ControlSide
+        },
+
+        destroyed() {
+            if (localStorage.getItem('navIndex')) {
+                localStorage.removeItem('navIndex');
+            }
         }
     };
 </script>
