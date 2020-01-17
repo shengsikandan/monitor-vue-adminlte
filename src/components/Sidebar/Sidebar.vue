@@ -9,7 +9,7 @@
                     <img src="../../static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>白丁</p>
+                    <p>Admin</p>
                     <!-- Status -->
                     <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
                 </div>
@@ -47,37 +47,19 @@
 </template>
 
 <script>
+    import getdata from "./sidebarservice/sidebarservice.js"
+    import sidebar from "./sidebarList/sidebarList"
     export default {
         name: 'sidebar',
         data() {
             return {
                 currentIndex: 0,
                 currentLevel: 0,
-                sidebarList: [{
-                    icon: 'fa-home',
-                    title: '首页',
-                    link: '/',
-                    children: []
-                }, {
-                    icon: 'fa-link',
-                    title: '其他链接',
-                    link: '/other',
-                    children: []
-                }, {
-                    icon: 'fa-bars',
-                    title: '下拉菜单',
-                    link: '#',
-                    children: [{
-                        icon: 'fa-link',
-                        title: '子菜单1',
-                        link: '/multiLevel/level1'
-                    }, {
-                        icon: 'fa-link',
-                        title: '子菜单2',
-                        link: '/multiLevel/level2'
-                    }]
-                }]
+                sidebarList: sidebar
             }
+        },
+        created() {
+            getdata
         },
         methods: {
             // 一级目录样式切换
@@ -88,21 +70,25 @@
                     this.currentLevel = 0;
                     localStorage.removeItem('levelIndex');
                 }
+
             },
+
             // 二级目录样式切换
             handleLevel(index) {
                 this.currentLevel = index + 1;
                 localStorage.setItem('levelIndex', this.currentLevel);
-            }
+            },
         },
+
         mounted() {
+
             if (localStorage.getItem('navIndex')) {
                 this.currentIndex = parseInt(localStorage.getItem('navIndex'));
             }
             if (localStorage.getItem('levelIndex')) {
                 this.currentLevel = parseInt(localStorage.getItem('levelIndex'));
             }
-        }
+        },
     }
 </script>
 

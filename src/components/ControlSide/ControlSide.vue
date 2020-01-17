@@ -18,7 +18,7 @@
                                 <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
                                 <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">白丁的生日</h4>
+                                    <h4 class="control-sidebar-subheading">Admin的生日</h4>
                                     <p>将在2020年4月1日</p>
                                 </div>
                             </a>

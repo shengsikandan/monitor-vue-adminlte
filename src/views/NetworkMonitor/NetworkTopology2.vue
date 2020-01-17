@@ -1,34 +1,28 @@
 <template>
-    <div id="level-2" class="animate-in">
+    <div id="NetworkMonitor-2" class="animate-in">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    页面标题
-                    <small>页面描述</small>
+                    网络时延
+                    <small>网络时延</small>
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content container-fluid">
-                <h1>子页面二</h1>
+                <h1>网络时延</h1>
             </section>
             <!-- /.content -->
         </div>
     </div>
 </template>
+
 <script>
     export default {
-        name: 'levelTwo',
-        data() {
-            return {
-
-            }
-        },
-        methods: {
-
-        }
+        name: "NetworkMonitorTwo"
     }
 </script>
-<style lang="scss" scoped>
+
+<style scoped>
 
 </style>

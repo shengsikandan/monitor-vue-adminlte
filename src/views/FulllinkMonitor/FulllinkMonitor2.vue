@@ -1,34 +1,28 @@
 <template>
-    <div id="other" class="animate-in">
+    <div id="FulllinkMonitor-2" class="animate-in">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    页面标题
-                    <small>页面描述</small>
+                    数据波动列表
+                    <small>数据波动列表</small>
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content container-fluid">
-                <h1>其他页面</h1>
+                <h1>数据波动列表</h1>
             </section>
             <!-- /.content -->
         </div>
     </div>
 </template>
+
 <script>
     export default {
-        name: 'other',
-        data() {
-            return {
-
-            }
-        },
-        methods: {
-
-        }
+        name: "FulllinkMonitorTwo"
     }
 </script>
-<style lang="scss" scoped>
+
+<style scoped>
 
 </style>

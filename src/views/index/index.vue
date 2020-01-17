@@ -2,8 +2,8 @@
     <div id="index" class="animate-in">
         <section class="content-header">
             <h1>
-                页面标题
-                <small>页面描述</small>
+                全链路监控
+                <small>全链路监控</small>
             </h1>
         </section>
         <section class="content container-fluid">
