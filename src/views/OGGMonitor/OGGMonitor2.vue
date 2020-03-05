@@ -1,16 +1,16 @@
 <template>
-    <div id="ResourcesMonitor-3" class="animate-in">
+    <div id="OGGMonitor-2" class="animate-in">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    主机详情
-                    <small>主机详情</small>
+                    OGG采集进程监控
+                    <small>OGG采集进程监控</small>
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content container-fluid">
-                <h1>主机详情</h1>
+                <h1>OGG采集进程监控</h1>
             </section>
             <!-- /.content -->
         </div>
@@ -19,7 +19,7 @@
 
 <script>
     export default {
-        name: "ResourcesMonitorThree"
+        name: "OGGMonitorTwo"
     }
 </script>
 

@@ -1,39 +1,44 @@
 <template>
-    <div id="DataSupplyMonitor-2" class="animate-in">
+    <div id="FulllinkMonitor-3" class="animate-in">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    数据波动监控
+                    数据波动详情
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content container-fluid">
                 <div id="myChart"
                      ref="chart"
-                     :style="{width: '1024px', height: '450px'}"></div>
+                     :style="{width: '95%', height: '450px'}"></div>
             </section>
+
             <!-- /.content -->
         </div>
     </div>
 </template>
+
 <script>
     export default {
-        name: 'DataSupplyMonitorTwo',
+        name: "FulllinkMonitorThree",
         data () {
             return {
                 objdata: [],
                 namedata: [],
                 datedata: [],
                 fluctuationdata: [],
-                objarra: []
+                objarra: [],
             }
         },
         mounted() {
             this.drawLine();
+            window.onresize = () => {//  根据窗口大小调整曲线大小
+                let myChart = this.$echarts.init(document.getElementById('myChart'));
+                myChart.resize();
+            }
         },
         methods: {
-
             drawLine(){
                 this.objdata = this.$store.state.obj.objdata
                 console.log(this.objdata)
@@ -73,58 +78,58 @@
                     let myChart = this.$echarts.init(bar_dv)
                     // 绘制图表
                     myChart.setOption({
-                        title: {
-                            text: '数据波动详情'
-                        },
-                        tooltip: {
-                            trigger: 'axis',
+
+                    tooltip: {
+                        trigger: 'axis',
                             axisPointer: {
-                                type: 'cross',
+                            type: 'cross',
                                 label: {
-                                    backgroundColor: '#6a7985'
-                                }
-                            },
-                        },
-                        legend: {
-                            data: this.namedata
-                        },
-                        toolbox: {
-                            feature: {
-                                saveAsImage: {}
+                                backgroundColor: '#6a7985'
                             }
                         },
-                        grid: {
-                            left: '5%',
-                            right: '8%',
-                            bottom: '8%',
+                    },
+                    legend: {
+                        data: this.namedata
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                            right: '4%',
+                            bottom: '3%',
                             containLabel: true
-                        },
-                        xAxis: [
-                            {
-                                type: 'category',
-                                boundaryGap: false,
-                                data: this.datedata,
-                            }
-                        ],
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: this.datedata
+                        }
+                    ],
                         yAxis: [
-                            {
-                                type: 'value',
-                                min: 0,
-                                max: 100,
-                                axisLabel: {
-                                    show: true,
-                                    interval: 'auto',
-                                    formatter: '{value}%' //自定义显示格式(b:name, c:value, d:百分比)
-                                },
-                            }
-                        ],
+                        {
+                            type: 'value',
+                            min: 0,
+                            max: 100,
+                            axisLabel: {
+                                show: true,
+                                interval: 'auto',
+                                formatter: '{value}%' //自定义显示格式(b:name, c:value, d:百分比)
+                            },
+                        }
+                    ],
                         series: this.objarra
-                    });
+                });
                 }
             },
+
         }
     }
 </script>
-<style lang="scss" scoped>
+
+<style scoped>
 
 </style>

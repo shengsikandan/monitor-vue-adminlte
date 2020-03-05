@@ -1,16 +1,16 @@
 <template>
-    <div id="ResourcesMonitor-3" class="animate-in">
+    <div id="FulllinkMonitor-1" class="animate-in">
         <div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    主机详情
-                    <small>主机详情</small>
+                    全链路总览
+                    <small>全链路总览</small>
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content container-fluid">
-                <h1>主机详情</h1>
+                <h1>全链路总览</h1>
             </section>
             <!-- /.content -->
         </div>
@@ -19,7 +19,7 @@
 
 <script>
     export default {
-        name: "ResourcesMonitorThree"
+        name: "FulllinkMonitorOne"
     }
 </script>
 
